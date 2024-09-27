@@ -4,7 +4,7 @@ public class Exercise12 {
     public static void main(String[] args) {
         Car myCar = new Car("Toyota","Supra","Gasoil");
         System.out.println(myCar.isTachometerEqualToZero());
-        //Comprueba que el vehiculo ya esta encendido o lo enciende
+        //Comprueba que el vehiculo ya esta encendidasdasdaso o lo enciende
         myCar.start();
 
         //Comprobar que no se enciende dos veces
