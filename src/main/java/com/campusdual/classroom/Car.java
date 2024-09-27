@@ -40,7 +40,7 @@ public class Car {
         public void accelerate() {
             if(!isTachometerEqualToZero()) {
                 if (speedometer < MAX_SPEED) {
-                    this.speedometer++;
+                    this.speedometer+=15;
                 } else {
                     System.out.println("Llego a la velocidad maxima");
                 }
@@ -52,7 +52,10 @@ public class Car {
         public void brake() {
             if(!isTachometerEqualToZero()) {
                 if (speedometer > 0) {
-                    this.speedometer--;
+                    this.speedometer-=15;
+                    if(speedometer<0){
+                        this.speedometer=0;
+                    }
                 } else {
                     System.out.println("El coche esta detenido");
                 }
@@ -62,9 +65,13 @@ public class Car {
         }
 
         public void turnAngleOfWheels(int angle) {
-            if(angle<=45 && angle>=-45){
-                this.wheelsAngle +=angle;
-            }else{
+            if(angle<=45 && angle>=-45) {
+                this.wheelsAngle += angle;
+            }else if(angle<-45){
+                this.wheelsAngle=-45;
+                System.out.println("El angulo es demasiado grande");
+            }else if(angle>45){
+                this.wheelsAngle=45;
                 System.out.println("El angulo es demasiado grande");
             }
         }

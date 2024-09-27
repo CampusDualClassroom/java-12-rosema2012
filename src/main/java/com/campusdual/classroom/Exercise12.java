@@ -13,7 +13,7 @@ public class Exercise12 {
         //c.stop();
 
         //aceleramos el coche hasta intentar pasar el limite
-        for (int i = 0; i < 125; i++) {
+        for (int i = 0; i < 26; i++) {
             myCar.accelerate();
         }
 
